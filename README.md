@@ -18,7 +18,8 @@ The controller communicates with the memory cards over a SPI/QSPI bus and expose
 
 ### Specifications
 
-- Max capacity: 256MB
+- Max capacity: 256MB+
+- Max addressable memory devices per memory card: 16
 - Interface: Depends on controller
 - Speed: Depend on controller
 

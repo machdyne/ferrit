@@ -8,15 +8,31 @@ Find more information on the [FERRIT project page](https://machdyne.com/ferrit/)
 
 ## Hardware
 
-The FERRIT system consists of 3 component types:
+FERRIT is a modular upgradable system with of 3 component types:
 
-| Component | Type | Description |
-| --------- |----- | ----------- |
+- A controller
+- A passive backplane
+- Removable ferroelectric memory cards
+
+The controller communicates with the memory cards over a SPI/QSPI bus and exposes the memory to an interface, as a USB mass storage device for example.
+
+### Specifications
+
+- Max capacity: 256MB
+- Interface: Depends on controller
+- Speed: Depend on controller
+
+*Note: The max capacity assumes double-sided memory cards with 1MB ICs. Higher capacities may be possible in the future.*
+
+### Components
+
+| Board | Type | Notes |
+| ----- | ---- | ----- |
 | FERRIT-CY | Controller | RP2040 / USB-FS |
-| FERRIT-M8 | Memory card | 8MB |
+| FERRIT-M8 | Memory card | 8 x SOP-16 |
 | FERRIT-16 | Backplane | 16 slots |
 
-### Firmware
+## Firmware
 
 The firmware can be updated by holding down the BOOT button while plugging in the USB cable, and then dragging and dropping a new UF2 file to the device.
 

@@ -12,7 +12,7 @@ The FERRIT system consists of 3 component types:
 
 | Component | Type | Description |
 | --------- |----- | ----------- |
-| FERRIT-CY | Controller | RP2040 |
+| FERRIT-CY | Controller | RP2040 / USB-FS |
 | FERRIT-M8 | Memory card | 8MB |
 | FERRIT-16 | Backplane | 16 slots |
 

@@ -10,6 +10,8 @@ FERRIT uses the [Ebenstahl](https://github.com/machdyne/ebenstahl) firmware.
 
 Find more information on the [FERRIT project page](https://machdyne.com/ferrit/).
 
+*The prototype hardware is under development and has not yet been fully tested.*
+
 ## Hardware
 
 FERRIT is a modular upgradable system with 3 component types:

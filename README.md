@@ -14,7 +14,7 @@ FERRIT is a modular upgradable system with 3 component types:
 - A passive backplane
 - Removable ferroelectric memory cards
 
-The controller communicates with the memory cards over a SPI/QSPI bus and exposes the memory to an interface, as a USB mass storage device, for example.
+The controller communicates with the memory cards over a SPI/QSPI bus and exposes the memory to an interface, such as a USB mass storage device.
 
 ### Specifications
 

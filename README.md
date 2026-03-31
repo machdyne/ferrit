@@ -8,7 +8,7 @@ Find more information on the [FERRIT project page](https://machdyne.com/ferrit/)
 
 ## Hardware
 
-FERRIT is a modular upgradable system with of 3 component types:
+FERRIT is a modular upgradable system with 3 component types:
 
 - A controller
 - A passive backplane

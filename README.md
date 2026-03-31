@@ -2,7 +2,9 @@
 
 FERRIT is a century-scale digital archival platform.
 
-This repo will contain PCB layouts, schematics, firmware and documentation.
+This repo contains PCB layouts, schematics and documentation.
+
+FERRIT uses the [Ebenstahl](https://github.com/machdyne/ebenstahl) firmware.
 
 Find more information on the [FERRIT project page](https://machdyne.com/ferrit/).
 

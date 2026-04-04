@@ -4,6 +4,11 @@
 	(generator_version "8.0")
 	(uuid "35b778ac-b1db-4ea8-b121-f3ec9686dae5")
 	(paper "A2")
+	(title_block
+		(title "Ferrit Backplane")
+		(date "2026-03-18")
+		(company "Copyright © 2026 Lone Dynamics Corporation")
+	)
 	(lib_symbols
 		(symbol "74xx:74LS138"
 			(pin_names
@@ -2916,7 +2921,7 @@
 		)
 		(uuid "ff90affa-42bc-4b9b-84e6-4320551f8337")
 	)
-	(text "FERRIT-K"
+	(text "FERRIT-M"
 		(exclude_from_sim no)
 		(at 476.25 387.35 0)
 		(effects

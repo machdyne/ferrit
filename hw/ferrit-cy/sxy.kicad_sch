@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "35b778ac-b1db-4ea8-b121-f3ec9686dae5")
 	(paper "A1")
+	(title_block
+		(title "Ferrit Controller Model Y")
+		(date "2026-03-19")
+		(rev "V0")
+		(company "Copyright © 2026 Lone Dynamics Corporation")
+	)
 	(lib_symbols
 		(symbol "Connector:TestPoint"
 			(pin_numbers hide)
@@ -5598,16 +5604,6 @@
 	)
 	(wire
 		(pts
-			(xy 160.02 121.92) (xy 161.29 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4363ad6d-e626-4955-8135-85ae2efd74c9")
-	)
-	(wire
-		(pts
 			(xy 134.62 176.53) (xy 118.11 176.53)
 		)
 		(stroke
@@ -7009,7 +7005,7 @@
 		)
 		(uuid "0ef3f6d7-c007-4753-8396-c17c79fa685d")
 	)
-	(text "0.6 * (1 + (210/47)) = 3.28"
+	(text "0.6 * (1 + (200/44.2)) = 3.3149"
 		(exclude_from_sim no)
 		(at 687.07 495.3 0)
 		(effects
@@ -7482,12 +7478,12 @@
 		(uuid "762f9509-c878-4f08-8326-4ea1ffbc20f9")
 	)
 	(label "PWR3V3"
-		(at 161.29 128.27 90)
+		(at 161.29 121.92 270)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left bottom)
+			(justify right bottom)
 		)
 		(uuid "78386076-d37e-4c6c-b20c-bb6586c8522a")
 	)
@@ -8919,7 +8915,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "210K"
+		(property "Value" "200K"
 			(at 678.688 510.413 0)
 			(effects
 				(font
@@ -9000,7 +8996,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "47K"
+		(property "Value" "44K2"
 			(at 678.688 534.543 0)
 			(effects
 				(font
@@ -10169,7 +10165,7 @@
 		(fields_autoplaced yes)
 		(uuid "39914c8f-a638-4a5b-b724-6333c70faf11")
 		(property "Reference" "U3"
-			(at 221.7294 117.094 0)
+			(at 221.9041 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -10177,8 +10173,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "W25Q32JVSS"
-			(at 221.7294 119.634 0)
+		(property "Value" "M95P32-IXMNT/E"
+			(at 221.9041 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)

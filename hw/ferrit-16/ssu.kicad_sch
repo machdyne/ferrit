@@ -4,6 +4,12 @@
 	(generator_version "8.0")
 	(uuid "86ed1906-88c0-4113-ab7c-ce662689fe6d")
 	(paper "A1")
+	(title_block
+		(title "Ferrit -M8 Memory Card (8 x SOP-16)")
+		(date "2026-03-07")
+		(rev "V0")
+		(company "Copyright © 2026 Lone Dynamics Corporation")
+	)
 	(lib_symbols
 		(symbol "74xx:74LS154"
 			(pin_names
@@ -5490,10 +5496,10 @@
 	)
 	(text "FERRIT-16\nU B E R S T A H L"
 		(exclude_from_sim no)
-		(at 722.63 563.372 0)
+		(at 722.63 561.34 0)
 		(effects
 			(font
-				(size 3.81 3.81)
+				(size 3.175 3.175)
 				(thickness 1)
 				(bold yes)
 			)

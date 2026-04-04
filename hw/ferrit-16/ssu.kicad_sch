@@ -5,7 +5,7 @@
 	(uuid "86ed1906-88c0-4113-ab7c-ce662689fe6d")
 	(paper "A1")
 	(title_block
-		(title "Ferrit -M8 Memory Card (8 x SOP-16)")
+		(title "Ferrit Backplane")
 		(date "2026-03-07")
 		(rev "V0")
 		(company "Copyright © 2026 Lone Dynamics Corporation")
@@ -5494,18 +5494,31 @@
 		)
 		(uuid "fec2c678-e57a-4848-8680-115b2c128c27")
 	)
-	(text "FERRIT-16\nU B E R S T A H L"
+	(text "U B E R S T A H L"
 		(exclude_from_sim no)
 		(at 722.63 561.34 0)
 		(effects
 			(font
-				(size 3.175 3.175)
+				(size 1.905 1.905)
 				(thickness 1)
 				(bold yes)
 			)
 			(justify left bottom)
 		)
 		(uuid "0ef3f6d7-c007-4753-8396-c17c79fa685d")
+	)
+	(text "FERRIT-16"
+		(exclude_from_sim no)
+		(at 721.868 557.276 0)
+		(effects
+			(font
+				(size 3.81 3.81)
+				(thickness 1)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "3768ae01-ea62-4541-9f85-9ed2b543b906")
 	)
 	(label "KQSPI_SD3"
 		(at 110.49 354.33 0)

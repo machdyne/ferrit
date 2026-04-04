@@ -5,7 +5,7 @@
 	(uuid "35b778ac-b1db-4ea8-b121-f3ec9686dae5")
 	(paper "A2")
 	(title_block
-		(title "Ferrit Backplane")
+		(title "Ferrit Memory Card (8 x SOP-16)")
 		(date "2026-03-18")
 		(company "Copyright © 2026 Lone Dynamics Corporation")
 	)

@@ -62,8 +62,8 @@ The FERRIT controller and memory cards use the same form-factor and share certai
 | 15 | GND | GND |
 | 17 | QSPI\_SD3 | QSPI\_SD3 |
 | 19 | GND | GND |
-| 2 | SS0 | GND |
-| 4 | QSPI\_SS | QSPI_\SS |
+| 2 | SS0 | QSPI_\SS |
+| 4 | QSPI\_SS | GND |
 | 6 | CS0 | CS0 |
 | 8 | CS1 | CS1 |
 | 10 | CS2 | CS2 |

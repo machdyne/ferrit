@@ -48,7 +48,7 @@ The firmware can be updated by holding down the BOOT button while plugging in th
 
 ### Connector
 
-The FERRIT controller is wired to the memory cards as follows:
+The FERRIT controller and memory cards use the same form-factor and share certain signals:
 
 | Pin | Controller | Memory Card |
 | --- | ---------- | ----------- |
@@ -73,7 +73,7 @@ The FERRIT controller is wired to the memory cards as follows:
 | 18 | SS3 | GND |
 | 20 | PWR3V3 | PWR3V3 |
 
-The slot select (SSx) signals determine which slot is selected, while the chip select (CSx) signals select an individual IC.
+The slot select (SSx) signals determine which slot is selected, while the chip select (CSx) signals select an IC on that slot.
 
 ## License
 

@@ -44,6 +44,37 @@ The controller communicates with the memory cards over a SPI/QSPI bus and expose
 
 The firmware can be updated by holding down the BOOT button while plugging in the USB cable, and then dragging and dropping a new UF2 file to the device.
 
+## Pinouts
+
+### Connector
+
+The FERRIT controller is wired to the memory cards as follows:
+
+| Pin | Controller | Memory Card |
+| --- | ---------- | ----------- |
+| 1 | QSPI\_SCLK | QSPI\_SCLK |
+| 3 | GND | GND |
+| 5 | QSPI\_SD0 | QSPI\_SD0 |
+| 7 | GND | GND |
+| 9 | QSPI\_SD1 | QSPI\_SD1 |
+| 11 | GND | GND |
+| 13 | QSPI\_SD2 | QSPI\_SD2 |
+| 15 | GND | GND |
+| 17 | QSPI\_SD3 | QSPI\_SD3 |
+| 19 | GND | GND |
+| 2 | SS0 | QSPI\_SS |
+| 4 | BOOT | GND |
+| 6 | CS0 | CS0 |
+| 8 | CS1 | CS1 |
+| 10 | CS2 | CS2 |
+| 12 | CS3 | CS3 |
+| 14 | SS1 | GND |
+| 16 | SS2 | GND |
+| 18 | SS3 | GND |
+| 20 | PWR3V3 | PWR3V3 |
+
+The slot select (SSx) signals determine which slot is selected, while the chip select (CSx) signals select an individual IC.
+
 ## License
 
 The contents of this repo are released under the [Lone Dynamics Open License](LICENSE.md).

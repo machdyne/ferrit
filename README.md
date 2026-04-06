@@ -2,7 +2,7 @@
 
 FERRIT is a century-scale digital archival platform.
 
-![Ferrit](https://github.com/machdyne/ferrit/blob/3d812e0852f94d980a5241f4c31794ffb859a9be/ferrit-16.png)
+![Ferrit](https://github.com/machdyne/ferrit/blob/9c0040ab0ed98b283a1fbcaeec6df7732da11892/ferrit-16.png)
 
 This repo contains PCB layouts, schematics and documentation.
 

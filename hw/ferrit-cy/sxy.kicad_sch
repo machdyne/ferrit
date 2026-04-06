@@ -8981,7 +8981,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LD-SWITCH:Button_2P_3x4mm"
+		(property "Footprint" "LD-SWITCH:SW_SMD_2P_3X6MM"
 			(at 594.614 108.712 0)
 			(effects
 				(font

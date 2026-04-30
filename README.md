@@ -4,9 +4,7 @@ FERRIT is a century-scale digital archival platform.
 
 ![Ferrit](https://github.com/machdyne/ferrit/blob/9c0040ab0ed98b283a1fbcaeec6df7732da11892/ferrit-16.png)
 
-This repo contains PCB layouts, schematics and documentation.
-
-FERRIT uses the [Ebenstahl](https://github.com/machdyne/ebenstahl) firmware.
+This repo contains PCB layouts, schematics, firmware and documentation.
 
 Find more information on the [FERRIT project page](https://machdyne.com/ferrit/).
 
@@ -43,6 +41,16 @@ The controller communicates with the memory cards over a SPI/QSPI bus and expose
 ## Firmware
 
 The firmware can be updated by holding down the BOOT button while plugging in the USB cable, and then dragging and dropping a new UF2 file to the device.
+
+You can build the firmware from source, if you have [pico-sdk](https://github.com/raspberrypi/pico-sdk) installed:
+
+```
+$ cd firmware/ferrit
+$ mkdir build
+$ cd build
+$ cmake .. -DPICO_DEFAULT_BOOT_STAGE2_FILE=$PICO_SDK_PATH/src/rp2040/boot_stage2/boot2_generic_03h.S
+$ make
+```
 
 ## Pinouts
 

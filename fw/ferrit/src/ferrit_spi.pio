@@ -1,0 +1,60 @@
+;
+; FERRIT PIO SPI - mode 0, MSB first
+; MOSI driven on falling edge, MISO sampled on rising edge.
+; sideset pin = SCK
+; out pin     = MOSI
+; in pin      = MISO
+;
+; Delay of [3] on each half-cycle gives 8 cycles per bit total.
+; At 125MHz sys_clk and clk_div=1: SCK = 125/8 = ~15.6 MHz
+; At clk_div=2: SCK ~7.8 MHz — use this for safety margin.
+;
+
+.program ferrit_spi
+.side_set 1
+
+.wrap_target
+    out pins, 1     side 0 [3]  ; drive MOSI, SCK low,  hold 4 cycles
+    in  pins, 1     side 1 [3]  ; sample MISO, SCK high, hold 4 cycles
+.wrap
+
+% c-sdk {
+#include "hardware/clocks.h"
+#include "hardware/gpio.h"
+
+static inline void ferrit_spi_program_init(PIO pio, uint sm, uint offset,
+                                           uint pin_sck, uint pin_mosi,
+                                           uint pin_miso, float clk_div) {
+
+    // Claim pins for PIO before configuring
+    pio_gpio_init(pio, pin_sck);
+    pio_gpio_init(pio, pin_mosi);
+    pio_gpio_init(pio, pin_miso);
+
+    // SCK and MOSI outputs, MISO input
+    pio_sm_set_consecutive_pindirs(pio, sm, pin_sck,  1, true);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin_mosi, 1, true);
+    pio_sm_set_consecutive_pindirs(pio, sm, pin_miso, 1, false);
+
+    gpio_pull_up(pin_miso);
+
+    pio_sm_config c = ferrit_spi_program_get_default_config(offset);
+
+    sm_config_set_sideset_pins(&c, pin_sck);
+    sm_config_set_out_pins(&c, pin_mosi, 1);
+    sm_config_set_in_pins(&c, pin_miso);
+
+    // MSB first, autopull/autopush at 8 bits
+    sm_config_set_out_shift(&c, false, true, 8);
+    sm_config_set_in_shift(&c,  false, true, 8);
+
+    sm_config_set_clkdiv(&c, clk_div);
+
+    pio_sm_init(pio, sm, offset, &c);
+
+    // Force SCK low before enabling
+    pio_sm_set_pins_with_mask(pio, sm, 0u, 1u << pin_sck);
+
+    pio_sm_set_enabled(pio, sm, true);
+}
+%}

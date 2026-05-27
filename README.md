@@ -34,6 +34,7 @@ The controller communicates with the memory cards over a SPI/QSPI bus and expose
 | ----- | ---- | ----- |
 | FERRIT-CY | Controller | RP2040 / USB-FS |
 | FERRIT-M8 | Memory card | 8 x SOP-16 |
+| FERRIT-1 | Backplane + Controller | RP2040 / USB-FS / 1 memory card slot |
 | FERRIT-16 | Backplane | 16 memory card slots |
 
 ## Firmware

@@ -1,6 +1,6 @@
 # FERRIT Digital Archival Platform
 
-FERRIT is a century-scale digital archival platform.
+FERRIT is a century-scale digital archival platform based on Ferroelectric RAM.
 
 ![Ferrit](https://github.com/machdyne/ferrit/blob/9c0040ab0ed98b283a1fbcaeec6df7732da11892/ferrit-16.png)
 

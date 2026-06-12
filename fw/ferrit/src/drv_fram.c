@@ -18,10 +18,12 @@
 extern pio_spi_t ferrit_spi;
 
 static void fram_set_ss(int ss) {
+#if !defined(FERRIT_1)
 	gpio_put(F_SS0, (ss >> 0) & 1);
 	gpio_put(F_SS1, (ss >> 1) & 1);
 	gpio_put(F_SS2, (ss >> 2) & 1);
 	gpio_put(F_SS3, (ss >> 3) & 1);
+#endif
 }
 
 static void fram_set_cs(int cs) {

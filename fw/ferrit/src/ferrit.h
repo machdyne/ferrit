@@ -1,6 +1,9 @@
 #ifndef _FERRIT_H_
 #define _FERRIT_H_
 
+//#define FERRIT_CY
+#define FERRIT_1
+
 #include <stdbool.h>
 
 void ferrit_init(void);
@@ -9,6 +12,8 @@ void ferrit_init(void);
 #define F_DRV_FRAM		1
 #define F_DRV_FLASH		2
 #define F_DRV_EEPROM		3
+
+#if defined(FERRIT_CY)
 
 #define F_SPI		spi0
 
@@ -36,5 +41,32 @@ void ferrit_init(void);
 #define F_MISO		8
 #define F_SIO2		10
 #define F_SIO3		11
+
+#elif defined(FERRIT_1)
+
+#define F_SPI		spi0
+
+#define F_LEDR		26
+#define F_LEDG		27
+#define F_LEDB		28
+
+#define F_SS		5
+
+#define F_CS0		12
+#define F_CS1		13
+#define F_CS2		14
+#define F_CS3		15
+
+#define F_SCK		6
+#define F_MOSI		7
+#define F_MISO		4
+#define F_SIO2		10
+#define F_SIO3		11
+
+#else
+
+#warning "FERRITx is not defined"
+
+#endif
 
 #endif	// _FERRIT_H_

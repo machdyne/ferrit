@@ -27,11 +27,13 @@ void ferrit_init(void) {
 	// SS strobe (active low enable on SN74HC154)
 	gpio_init(F_SS); gpio_set_dir(F_SS, GPIO_OUT); gpio_put(F_SS, 1);
 
+#if !defined(FERRIT_1)
 	// SS demux address bits (slot select 0-15)
 	gpio_init(F_SS0); gpio_set_dir(F_SS0, GPIO_OUT); gpio_put(F_SS0, 0);
 	gpio_init(F_SS1); gpio_set_dir(F_SS1, GPIO_OUT); gpio_put(F_SS1, 0);
 	gpio_init(F_SS2); gpio_set_dir(F_SS2, GPIO_OUT); gpio_put(F_SS2, 0);
 	gpio_init(F_SS3); gpio_set_dir(F_SS3, GPIO_OUT); gpio_put(F_SS3, 0);
+#endif
 
 	// CS demux address bits (chip select 0-15 on card)
 	gpio_init(F_CS0); gpio_set_dir(F_CS0, GPIO_OUT); gpio_put(F_CS0, 0);

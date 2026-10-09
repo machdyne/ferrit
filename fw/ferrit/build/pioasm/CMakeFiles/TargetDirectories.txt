@@ -1,0 +1,7 @@
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/pioasm.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/edit_cache.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/rebuild_cache.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/list_install_components.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/install.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/install/local.dir
+/home/phil/Projects/lone/hw/github/ferrit/fw/ferrit/build/pioasm/CMakeFiles/install/strip.dir

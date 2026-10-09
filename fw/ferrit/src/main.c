@@ -53,9 +53,6 @@ static uint32_t blink_interval_ms = BLINK_NOT_MOUNTED;
 
 void led_blinking_task(void);
 
-// declared in usb_msc.c
-void usb_msc_reset_eject(void);
-
 /*------------- MAIN -------------*/
 int main(void) {
 
@@ -78,9 +75,6 @@ int main(void) {
 
 // Invoked when device is mounted
 void tud_mount_cb(void) {
-  // a fresh enumeration re-inserts the medium on every LUN, so that
-  // replugging the device recovers from a host-initiated eject
-  usb_msc_reset_eject();
   blink_interval_ms = BLINK_MOUNTED;
 }
 
@@ -109,7 +103,8 @@ void led_blinking_task(void) {
 	static uint64_t start_ms = 0;
 	static bool led_state = false;
 
-	if ((time_us_32() / 1000) - start_ms < blink_interval_ms) return;
+// Blink every interval ms
+	if ((time_us_32() / 1000) - start_ms < blink_interval_ms) return; // not enough time
 	start_ms += blink_interval_ms;
 
 	gpio_put(F_LEDG, led_state);
